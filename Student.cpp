@@ -31,7 +31,7 @@ student::student(string studentFirstName, string studentLastName, string ssn, do
     {
         this->examGrades[i] = examGrades[i];
     }
-
+    calcAvg();
 }
 
 //Return values for getter functions
@@ -86,14 +86,17 @@ void student::calcAvg()
     {
         sum += examGrades[i];
     }
-    avg = sum / 4;
+    examAvg = sum / 4;
+    
 }
 
 //Display function
-void student::display()
+void student::displayStudent()
 {
     cout << firstName << "   " << lastName << "   " << ssn;
-    for (int i = 0; i < 4; ++i)
+    for (int i = 0; i < 4; ++i) {
         cout << "   " << examGrades[i];
+    }
+    cout << "   " << examAvg;
     cout << endl;
 }

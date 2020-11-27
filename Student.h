@@ -20,7 +20,7 @@ public:
 	static int studentNumber;
 	student();
 	student(string StudentFirstName, string StudentLastName, string ssn, double examGrades[4]);
-
+	
 	//Initialize getter functions for each attribute
 	string getFirstName();
 	string getLastName();
@@ -38,5 +38,6 @@ public:
 	void calcAvg();
 
 	//Initialize display function
-	void display();
+	void displayStudent();
+	
 };

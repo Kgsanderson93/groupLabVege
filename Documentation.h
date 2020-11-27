@@ -2,7 +2,7 @@
 //                                                                     
 // Filename: StudentMain.cpp
 // Date: November 25, 2020
-// Programmers: David Shostak,            
+// Programmers: David Shostak, Kayla Sanderson           
 //
 // Description:
 // 
