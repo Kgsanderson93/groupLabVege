@@ -71,10 +71,38 @@ double ClassRoom::examAvg()
 
 void ClassRoom::sortByExamAvg()
 {
-
+    int smallest = 0;
+    student hold;
+    for (int i = 0; i < count-1; i++) {
+        smallest = i;
+        for (int current= i+1; current<count; current++){
+            if (studentClassList[current].getExamAvg() < studentClassList[smallest].getExamAvg()){
+                smallest = current;
+            }
+        }
+        hold = studentClassList[smallest];
+        studentClassList[smallest] = studentClassList[i];
+        studentClassList[i] = hold;
+    }
 }
 
 
 void ClassRoom::sortByLastName()
 {
+    
+  int smallest = 0;
+  student hold;
+  int compare;
+  for (int i = 0; i < count - 1; i++) {
+   smallest = i;
+      for (int current = i + 1; current < count; current++) {
+          compare = strcmp(studentClassList[curent].getLastName(), studentClassList[smallest].getLastName());
+        if (compare < 0) {
+          smallest = current;
+        }
+      }
+   hold = studentClassList[smallest];
+   studentClassList[smallest] = studentClassList[i];
+   studentClassList[i] = hold;
+  }
 }
