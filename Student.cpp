@@ -4,13 +4,13 @@
 using namespace std;
 
 //Start student count at 0. It will be increased or decreased for each count of students being created or removed
-int student::num = 0;
+int Student::studentNumber = 0;
 //initialize this pointers
-student::student()
+Student::Student()
 {
-    this->firstName = "";
-    this->lastName = "";
-    this->ssn = "";
+    this-> studentFirstName = new string("");
+    this-> studentLastName = new string("");
+    this-> ssn = "";
     //examGrades count starts at 0
     for (int i = 0; i < 4; ++i)
     {
@@ -19,12 +19,12 @@ student::student()
 
 }
 
-//parameterized constructor for pointers
-student::student(string studentFirstName, string studentLastName, string ssn, double grades[4])
+//parameterized initializer function for pointers
+void Student::initializeStudent(string studentFirstName, string studentLastName, string ssn, double grades[4])
 {
 
-    this->firstName = studentFirstName;
-    this->lastName = studentLastName;
+    this->studentFirstName = &studentFirstName;
+    this->studentLastName = &studentLastName;
     this->ssn = ssn;
     //for loop counts from 0 to 3 to keep track of the 4 exams
     for (int i = 0; i < 4; ++i)
@@ -35,51 +35,51 @@ student::student(string studentFirstName, string studentLastName, string ssn, do
 }
 
 //Return values for getter functions
-string student::getFirstName()
+const string* Student::getFirstName()
 {
     return studentFirstName;
 }
-string student::getLastName()
+const string* Student::getLastName()
 {
     return studentLastName;
 }
-string student::getSSN()
+string Student::getSSN()
 {
     return ssn;
 }
-double* student::getExamGrades()
+double* Student::getExamGrades()
 {
     return examGrades;
 }
 
-double student::getExamAvg()
+double Student::getExamAvg()
 {
     return examAvg;
 }
 
 
-void student::setStudentFirstName(string studentFirstName)
+void Student::setStudentFirstName(string* studentFirstName)
 {
-    studentFirstName = setStudentFirstName;
+    this-> studentFirstName = studentFirstName;
 }
-void student::setStudentLastName(string studentLastName)
+void Student::setStudentLastName(string* studentLastName)
 {
-    studentLastName = setLastName;
+    this-> studentLastName = studentLastName;
 }
-void student::setSSN(string ssn)
+void Student::setSSN(string ssn)
 {
-    ssn = setSSN;
+    this-> ssn = ssn;
 }
-void student::setExamGrades(double[4])
+void Student::setExamGrades(double examGrades[4])
 {
     for (int i = 0; i < 4; ++i)
     {
-        examGrades[i] = [i];
+        this-> examGrades[i] = examGrades[i];
     }
 }
 
 //Calculate Average function
-void student::calcAvg()
+void Student::calcAvg()
 {
     double sum = 0;
     for (int i = 0; i < 4; ++i)
@@ -91,9 +91,9 @@ void student::calcAvg()
 }
 
 //Display function
-void student::displayStudent()
+void Student::displayStudent()
 {
-    cout << firstName << "   " << lastName << "   " << ssn;
+    cout << studentFirstName << "   " << studentLastName << "   " << ssn;
     for (int i = 0; i < 4; ++i) {
         cout << "   " << examGrades[i];
     }

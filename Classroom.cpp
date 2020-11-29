@@ -2,7 +2,7 @@
 #include<string>
 #include<fstream>
 #include"Classroom.h"
-#include"Student.h"
+
 
 using namespace std;
 
@@ -10,7 +10,7 @@ ClassRoom::ClassRoom() {//Classroom constructor function
 
 }
 
-void read()
+void ClassRoom::read()
 {
     //open file and create student objects
     ifstream fin("student.txt");
@@ -34,17 +34,17 @@ void read()
         fin >> examGrades[2];
         fin >> examGrades[3];
         
-        studentClassList[current]= new student(studentFirstName, studentLastName, ssn, examGrades);
+        studentClassList[current].initializeStudent(studentFirstName, studentLastName, ssn, examGrades);
 
         current++;
-        student::num++;
+        Student::studentNumber++;
     }
     }
     else {
-        return 1;
+    
         cout << "File fails to open"<< endl;
     }
-    count = student::num;
+    count = Student::studentNumber;
 }
 
 
@@ -72,7 +72,7 @@ double ClassRoom::examAvg()
 void ClassRoom::sortByExamAvg()
 {
     int smallest = 0;
-    student hold;
+    Student hold;
     for (int i = 0; i < count-1; i++) {
         smallest = i;
         for (int current= i+1; current<count; current++){
@@ -91,12 +91,13 @@ void ClassRoom::sortByLastName()
 {
     
   int smallest = 0;
-  student hold;
+  Student hold;
   int compare;
   for (int i = 0; i < count - 1; i++) {
    smallest = i;
       for (int current = i + 1; current < count; current++) {
-          compare = strcmp(studentClassList[curent].getLastName(), studentClassList[smallest].getLastName());
+
+          compare = strcmp(studentClassList[current].getLastName()->c_str(), studentClassList[smallest].getLastName()->c_str());
         if (compare < 0) {
           smallest = current;
         }

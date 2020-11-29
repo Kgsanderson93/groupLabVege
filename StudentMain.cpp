@@ -1,5 +1,4 @@
 #include"Classroom.h"
-#include"Student.h"
 #include <iomanip>
 #include <string>
 #include <fstream>
@@ -8,9 +7,9 @@ using namespace std;
 
 int main()
 {
-	ClassRoom csc134 = new ClassRoom();
+	ClassRoom csc134 = ClassRoom();
 	csc134.read();
 	csc134.sortByExamAvg();
-	csc132.display();
+	csc134.print();
 	return 0;
 }

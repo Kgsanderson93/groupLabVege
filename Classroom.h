@@ -1,4 +1,4 @@
-#include "Student.cpp"
+#include "Student.h"
 using namespace std;
 
 class ClassRoom
@@ -9,7 +9,7 @@ private:
     //Count of the number of students in the classroom
     int count;
     //Dynamic array of student objects (max 24)
-    student studentClassList[24];
+    Student studentClassList[24];
     //Read the input data file and create student objects
 public:
 
