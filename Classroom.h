@@ -1,7 +1,5 @@
 #include "Student.cpp"
 using namespace std;
-#define
-#ifndef
 
 class ClassRoom
 {
@@ -24,4 +22,3 @@ public:
     void sortByExamAvg();
     void sortByLastName();
 };
-#endif

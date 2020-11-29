@@ -10,7 +10,7 @@ ClassRoom::ClassRoom() {//Classroom constructor function
 
 }
 
-void ClassRoom::read()
+void read()
 {
     //open file and create student objects
     ifstream fin("student.txt");
@@ -34,7 +34,7 @@ void ClassRoom::read()
         fin >> examGrades[2];
         fin >> examGrades[3];
         
-        studentClassList [current]= new student(studentFirstName, studentLastName, ssn, examGrades);
+        studentClassList[current]= new student(studentFirstName, studentLastName, ssn, examGrades);
 
         current++;
         student::num++;
