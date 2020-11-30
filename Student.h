@@ -19,7 +19,7 @@ public:
 	//student number initially set to zero.
 	static int studentNumber;
 	Student();
-	void initializeStudent(string StudentFirstName, string StudentLastName, string ssn, double examGrades[4]);
+	Student(string StudentFirstName, string StudentLastName, string ssn, double examGrades[4]);
 	
 	//Initialize getter functions for each attribute
 	const string* getFirstName();

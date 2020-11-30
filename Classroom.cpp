@@ -34,7 +34,7 @@ void ClassRoom::read()
         fin >> examGrades[2];
         fin >> examGrades[3];
         
-        studentClassList[current].initializeStudent(studentFirstName, studentLastName, ssn, examGrades);
+        studentClassList[current]=new Student(studentFirstName, studentLastName, ssn, examGrades);
 
         current++;
         Student::studentNumber++;

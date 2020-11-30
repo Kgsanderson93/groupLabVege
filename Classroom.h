@@ -9,7 +9,7 @@ private:
     //Count of the number of students in the classroom
     int count;
     //Dynamic array of student objects (max 24)
-    Student studentClassList[24];
+    Student* studentClassList[24];
     //Read the input data file and create student objects
 public:
 

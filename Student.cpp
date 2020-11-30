@@ -20,7 +20,7 @@ Student::Student()
 }
 
 //parameterized initializer function for pointers
-void Student::initializeStudent(string studentFirstName, string studentLastName, string ssn, double grades[4])
+Student::Student(string studentFirstName, string studentLastName, string ssn, double grades[4])
 {
 
     this->studentFirstName = &studentFirstName;
