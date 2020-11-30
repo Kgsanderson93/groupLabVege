@@ -2,18 +2,30 @@
 #include<string>
 #include<fstream>
 #include"Classroom.h"
-
-
 using namespace std;
 
 ClassRoom::ClassRoom() {//Classroom constructor function
+    this->count = 0;
+    this->studentClassList = new Student*[MAX_SIZE];
+}
 
+ClassRoom::~ClassRoom()
+{
+    //delete everything in student class list
+    for (int i = 0; i < count; i++) {
+        delete this->studentClassList[i];
+    }
+
+    //then delete studentClassList
+    delete this->studentClassList;
 }
 
 void ClassRoom::read()
 {
     //open file and create student objects
-    ifstream fin("student.txt");
+    ifstream fin;
+    fin.open("students.txt");
+
     int size = 0;
     string studentFirstName;
     string studentLastName;
@@ -23,22 +35,25 @@ void ClassRoom::read()
     int current = 0;
 
     // classroom initializer function
-    if(fin.is_open()){//have to check if open or error will occur if not. 
-    while (!fin.eof())//until end of file. 
-    {
-        fin >> studentFirstName;
-        fin >> studentLastName;
-        fin >> ssn;
-        fin >> examGrades[0];
-        fin >> examGrades[1];
-        fin >> examGrades[2];
-        fin >> examGrades[3];
+    //have to check if open or error will occur if not.
+    if(fin.is_open())
+    { 
+        while (!fin.eof())//until end of file. 
+        {
+            fin >> studentFirstName;
+            fin >> studentLastName;
+            fin >> ssn;
+            fin >> examGrades[0];
+            fin >> examGrades[1];
+            fin >> examGrades[2];
+            fin >> examGrades[3];
         
-        studentClassList[current]=new Student(studentFirstName, studentLastName, ssn, examGrades);
+            studentClassList[current] = new Student (studentFirstName, studentLastName, ssn, examGrades);
+      
 
-        current++;
-        Student::studentNumber++;
-    }
+            current++;
+            Student::studentNumber++;
+        }
     }
     else {
     
@@ -51,7 +66,7 @@ void ClassRoom::read()
 void ClassRoom::print()
 {
     for (int i = 0; i < count; i++) {
-        studentClassList[i].displayStudent();
+        studentClassList[i]->displayStudent();
     }
 }
 
@@ -61,7 +76,7 @@ double ClassRoom::examAvg()
     double avg = 0;
     double currentStudent = 0;
     for (int i = 0; i < count; i++) {
-        currentStudent = studentClassList[i].getExamAvg();
+        currentStudent = studentClassList[i]->getExamAvg();
         avg = avg + currentStudent;
     }
     double exmAvg = avg / count;
@@ -72,11 +87,11 @@ double ClassRoom::examAvg()
 void ClassRoom::sortByExamAvg()
 {
     int smallest = 0;
-    Student hold;
+    Student* hold;
     for (int i = 0; i < count-1; i++) {
         smallest = i;
         for (int current= i+1; current<count; current++){
-            if (studentClassList[current].getExamAvg() < studentClassList[smallest].getExamAvg()){
+            if (studentClassList[current]->getExamAvg() < studentClassList[smallest]->getExamAvg()){
                 smallest = current;
             }
         }
@@ -91,13 +106,12 @@ void ClassRoom::sortByLastName()
 {
     
   int smallest = 0;
-  Student hold;
+  Student* hold;
   int compare;
   for (int i = 0; i < count - 1; i++) {
    smallest = i;
       for (int current = i + 1; current < count; current++) {
-
-          compare = strcmp(studentClassList[current].getLastName()->c_str(), studentClassList[smallest].getLastName()->c_str());
+          compare = strcmp(studentClassList[current]->getLastName().c_str(), studentClassList[smallest]->getLastName().c_str());
         if (compare < 0) {
           smallest = current;
         }

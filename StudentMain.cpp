@@ -11,5 +11,7 @@ int main()
 	csc134.read();
 	csc134.sortByExamAvg();
 	csc134.print();
+
+	system("pause");
 	return 0;
 }

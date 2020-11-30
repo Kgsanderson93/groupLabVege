@@ -4,16 +4,19 @@ using namespace std;
 class ClassRoom
 {
 private:
+    const int MAX_SIZE = 24;
     //Name of classroom object
-    string CSC134;
+    string CSC134; //string courseName;
     //Count of the number of students in the classroom
     int count;
     //Dynamic array of student objects (max 24)
-    Student* studentClassList[24];
+    //Student studentClassList[24];
+    Student** studentClassList;
     //Read the input data file and create student objects
 public:
 
-    ClassRoom();
+    ClassRoom(); //this->studentClassList = new Student[this->count];
+    ~ClassRoom();
     void read();
     void print();
     //Class exam average
@@ -22,3 +25,4 @@ public:
     void sortByExamAvg();
     void sortByLastName();
 };
+
