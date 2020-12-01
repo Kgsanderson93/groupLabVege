@@ -30,8 +30,8 @@ public:
 	double getExamAvg();
 
 	//Initialize setter functions for each attribute
-	//void setStudentFirstName(string studentFirstName);
-	//void setStudentLastName(string studentLastName);
+	void setStudentFirstName(string* studentFirstName);
+	void setStudentLastName(string* studentLastName);
 	void setSSN(string ssn);
 	void setExamGrades(double examGrades[4]);
 

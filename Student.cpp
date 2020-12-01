@@ -42,14 +42,17 @@ const string Student::getFirstName()
 {
     return studentFirstName;
 }
+
 const string Student::getLastName()
 {
     return studentLastName;
 }
+
 string Student::getSSN()
 {
     return ssn;
 }
+
 double* Student::getExamGrades()
 {
     return examGrades;
@@ -60,16 +63,16 @@ double Student::getExamAvg()
     return examAvg;
 }
 
-/*
-void Student::setStudentFirstName(string studentFirstName)
+
+void Student::setStudentFirstName(string* studentFirstName)
 {
-    this-> studentFirstName = studentFirstName;
+    studentFirstName = studentFirstName;
 }
-void Student::setStudentLastName(string studentLastName)
+void Student::setStudentLastName(string* studentLastName)
 {
-    this-> studentLastName = studentLastName;
+     studentLastName = studentLastName;
 }
-*/
+
 void Student::setSSN(string ssn)
 {
     this-> ssn = ssn;
