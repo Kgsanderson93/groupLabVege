@@ -1,3 +1,14 @@
+//
+// Class: Classroom.cpp                                          
+//                                                                   
+// Description:
+// Description of the class and its purpose         
+//
+// List of data members
+//
+// List of member functions                                       
+// 
+///////////////////////////////////////////////////////////////////////
 #include<iostream>
 #include<string>
 #include<fstream>
@@ -19,6 +30,20 @@ ClassRoom::~ClassRoom()
     //then delete studentClassList
     delete this->studentClassList;
 }
+
+///////////////////////////////////////////////////////////////////////
+//
+// Function: read()                                          
+//                                                                   
+// Description:
+//    Opens the students.txt file and stores the information in the variables
+//
+// Parameters:  
+//                  
+//                                                       
+// Returns:                  
+//                                            
+///////////////////////////////////////////////////////////////////////
 
 void ClassRoom::read()
 {
@@ -62,6 +87,19 @@ void ClassRoom::read()
     count = Student::studentNumber;
 }
 
+///////////////////////////////////////////////////////////////////////
+//
+// Function: print()                                         
+//                                                                   
+// Description:
+//    Displays the student objects stored in the studentClassList array
+//
+// Parameters:  
+//                  
+//                                                       
+// Returns:                  
+//                                            
+///////////////////////////////////////////////////////////////////////
 
 void ClassRoom::print()
 {
@@ -70,6 +108,20 @@ void ClassRoom::print()
     }
 }
 
+///////////////////////////////////////////////////////////////////////
+//
+// Function: examAvg()                                          
+//                                                                   
+// Description:
+//    Calculates the average exam score of all the students
+//
+// Parameters:  
+//                  
+//                                                       
+// Returns:  
+//    exmAvg : The average grade of all the students                 
+//                                            
+///////////////////////////////////////////////////////////////////////
 
 double ClassRoom::examAvg()
 {
@@ -83,6 +135,20 @@ double ClassRoom::examAvg()
     return exmAvg;
 }
 
+///////////////////////////////////////////////////////////////////////
+//
+// Function: sortByExamAvg()                                          
+//                                                                   
+// Description:
+//    Sorts the list of students by using their exam score
+//
+// Parameters:  
+//                  
+//                                                       
+// Returns:  
+//                    
+//                                            
+///////////////////////////////////////////////////////////////////////
 
 void ClassRoom::sortByExamAvg()
 {
@@ -101,6 +167,19 @@ void ClassRoom::sortByExamAvg()
     }
 }
 
+///////////////////////////////////////////////////////////////////////
+//
+// Function: sortByLastName()                                          
+//                                                                   
+// Description:
+//    Sorts the list of students by using their last name
+//
+// Parameters:  
+//                  
+//                                                       
+// Returns:                  
+//                                            
+///////////////////////////////////////////////////////////////////////
 
 void ClassRoom::sortByLastName()
 {

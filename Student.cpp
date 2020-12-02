@@ -1,3 +1,14 @@
+//
+// Class: Student.cpp                                         
+//                                                                   
+// Description:
+// Description of the class and its purpose         
+//
+// List of data members
+//
+// List of member functions                                       
+// 
+///////////////////////////////////////////////////////////////////////
 #include<iostream>
 #include<string>
 #include"Student.h"
@@ -38,45 +49,181 @@ Student::Student(string studentFirstName, string studentLastName, string ssn, do
 }
 
 //Return values for getter functions
+
+///////////////////////////////////////////////////////////////////////
+//
+// Function: getFirstName()                                          
+//                                                                   
+// Description:
+//    A getter function for the first name
+//
+// Parameters:  
+//                  
+//                                                       
+// Returns:  
+//    studentFirstName : The first name of the student                 
+//                                            
+///////////////////////////////////////////////////////////////////////
+
 const string Student::getFirstName()
 {
     return studentFirstName;
 }
+
+///////////////////////////////////////////////////////////////////////
+//
+// Function: getLastName()                                          
+//                                                                   
+// Description:
+//    A getter function for the student's last name
+//
+// Parameters:                
+//                                                       
+// Returns:  
+//    studentLastName : The last name of the student                 
+//                                            
+///////////////////////////////////////////////////////////////////////
 
 const string Student::getLastName()
 {
     return studentLastName;
 }
 
+///////////////////////////////////////////////////////////////////////
+//
+// Function: getSSN()                                          
+//                                                                   
+// Description:
+//    A getter function for the student's Social Security Number
+//
+// Parameters:  
+//                 
+//                                                       
+// Returns:  
+//    ssn : The student's Social Security Number                 
+//                                            
+///////////////////////////////////////////////////////////////////////
+
 string Student::getSSN()
 {
     return ssn;
 }
+
+///////////////////////////////////////////////////////////////////////
+//
+// Function: getExamGrades()                                          
+//                                                                   
+// Description:
+//    A getter function for the student's exam grades
+//
+// Parameters:  
+//                  
+//                                                       
+// Returns:  
+//    examGrades : An array containing the student's exam grades                 
+//                                            
+///////////////////////////////////////////////////////////////////////
 
 double* Student::getExamGrades()
 {
     return examGrades;
 }
 
+///////////////////////////////////////////////////////////////////////
+//
+// Function: getExamAvg()                                          
+//                                                                   
+// Description:
+//    A getter function for the student's average exam score
+//
+// Parameters:  
+//                   
+//                                                       
+// Returns:  
+//    examAvg : The average exam score for the student                 
+//                                            
+///////////////////////////////////////////////////////////////////////
+
 double Student::getExamAvg()
 {
     return examAvg;
 }
 
+///////////////////////////////////////////////////////////////////////
+//
+// Function: setStudentFirstName()                                          
+//                                                                   
+// Description:
+//    A setter function for the student's first name
+//
+// Parameters:  
+//    studentFirstName : The first name of the student object               
+//                                                       
+// Returns:  
+//                     
+//                                            
+///////////////////////////////////////////////////////////////////////
 
 void Student::setStudentFirstName(string* studentFirstName)
 {
     studentFirstName = studentFirstName;
 }
+
+///////////////////////////////////////////////////////////////////////
+//
+// Function: setStudentLastName()                                          
+//                                                                   
+// Description:
+//    A setter function for the student's last name
+//
+// Parameters:  
+//    studentLastName : The last name of the student object               
+//                                                       
+// Returns:  
+//                     
+//                                            
+///////////////////////////////////////////////////////////////////////
+
 void Student::setStudentLastName(string* studentLastName)
 {
      studentLastName = studentLastName;
 }
 
+///////////////////////////////////////////////////////////////////////
+//
+// Function: setSSN()                                          
+//                                                                   
+// Description:
+//    A setter function for the student's Social Security Number
+//
+// Parameters:  
+//    ssn : The Social Security Number for the student object               
+//                                                       
+// Returns:  
+//                     
+//                                            
+///////////////////////////////////////////////////////////////////////
+
 void Student::setSSN(string ssn)
 {
     this-> ssn = ssn;
 }
+
+///////////////////////////////////////////////////////////////////////
+//
+// Function: setExamGrades()                                          
+//                                                                   
+// Description:
+//    A setter function for the student's exam scores
+//
+// Parameters:  
+//    examGrades : An array containing the exam scores for a student object               
+//                                                       
+// Returns:  
+//                     
+//                                            
+///////////////////////////////////////////////////////////////////////
+
 void Student::setExamGrades(double examGrades[4])
 {
     for (int i = 0; i < 4; ++i)
@@ -85,7 +232,21 @@ void Student::setExamGrades(double examGrades[4])
     }
 }
 
-//Calculate Average function
+///////////////////////////////////////////////////////////////////////
+//
+// Function: calcAvg()                                          
+//                                                                   
+// Description:
+//    Calculates the average score in an array of exam scores
+//
+// Parameters:  
+//                 
+//                                                       
+// Returns:  
+//                     
+//                                            
+///////////////////////////////////////////////////////////////////////
+
 void Student::calcAvg()
 {
     double sum = 0;
@@ -97,7 +258,21 @@ void Student::calcAvg()
     
 }
 
-//Display function
+///////////////////////////////////////////////////////////////////////
+//
+// Function: displayStudent()                                          
+//                                                                   
+// Description:
+//    Displays the attributes for each student object
+//
+// Parameters:  
+//                   
+//                                                       
+// Returns:  
+//                     
+//                                            
+///////////////////////////////////////////////////////////////////////
+
 void Student::displayStudent()
 {
     cout << studentFirstName << "   " << studentLastName << "   " << ssn;

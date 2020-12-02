@@ -1,3 +1,15 @@
+///////////////////////////////////////////////////////////////////////
+//
+// Class: Classroom.h                                         
+//                                                                   
+// Description: 
+// 
+//
+// List of data members
+// string name, int count, student s[24]
+// List of member functions                                       
+// void read(), void print(), void examAvg(), void sortByExamAvg(), void sortByLastName()
+///////////////////////////////////////////////////////////////////////
 #include "Student.h"
 using namespace std;
 
