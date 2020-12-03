@@ -191,7 +191,7 @@ void ClassRoom::sortByLastName()
    smallest = i;
       for (int current = i + 1; current < count; current++) {
           compare = strcmp(studentClassList[current]->getLastName().c_str(), studentClassList[smallest]->getLastName().c_str());
-        if (compare < 0) {
+        if (compare < 0) { // can we use == here instead srtcmp?
           smallest = current;
         }
       }
