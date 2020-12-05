@@ -65,7 +65,7 @@ void ClassRoom::read()
     {
             while (!fin.eof())//until end of file.
         {
-            fin >> studentFirstName
+            fin >> studentFirstName;
             fin >> studentLastName;
             fin >> ssn;
             fin >> examGrades[0];

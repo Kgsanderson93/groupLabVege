@@ -17,11 +17,7 @@ using namespace std;
 
 int main()
 {
-	//ClassRoom csc134 = ClassRoom();
-	//csc134.read();
-	//csc134.sortByExamAvg();
-	//csc134.print();
-	ClassRoom csc134;
+	ClassRoom csc134 = ClassRoom();
 	csc134.read();
 	cout << "Student data sorted by last name";
 	csc134.sortByLastName();
@@ -29,13 +25,6 @@ int main()
 	cout << "Student data sorted by exam average";
 	csc134.sortByExamAvg();
 	csc134.print();
-	return 0;
-	Student* x = new Student();
-	string hold = "Lisa";
-	string* point = &hold;
-	x->setStudentFirstName(point);
-	string recieve = x->getFirstName();
-	cout << recieve << endl;
 	system("pause");
 	return 0;
 }
