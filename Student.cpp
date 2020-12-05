@@ -12,6 +12,7 @@
 #include<iostream>
 #include<string>
 #include"Student.h"
+#include<iomanip>
 using namespace std;
 
 //Start student count at 0. It will be increased or decreased for each count of students being created or removed
@@ -275,10 +276,10 @@ void Student::calcAvg()
 
 void Student::displayStudent()
 {
-    cout << studentFirstName << " " << studentLastName << " " << ssn;
+    cout << studentFirstName << " " << studentLastName << setfill (" ") << setw (10) << ssn;
     for (int i = 0; i < 4; ++i) {
-        cout << "   " << examGrades[i];
+        cout << setfill(" ") << setw(10) << examGrades[i];
     }
-    cout << "   " << examAvg;
+    cout << setfill(" ") << setw(10) << examAvg;
     cout << endl;
 }
