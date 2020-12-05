@@ -30,7 +30,7 @@ int main()
 	double examAvg = csc134.examAvg();
 	cout << "The total average of the class is: " << examAvg << endl;
 	int count = csc134.getCount();
-	cout << "The number of students created in the Classroom is " << count << endl;
+	cout << "the number of students created in the Classroom is " << count << endl;
 	system("pause");
 	return 0;
 }

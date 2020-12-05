@@ -21,8 +21,10 @@ ClassRoom::ClassRoom() {//Classroom constructor function
 ClassRoom::~ClassRoom()
 {
     //delete everything in student class list
-    for (int i = 0; i < count; i++) {
+    int hold = count;
+    for (int i = 0; i < hold; i++) {
         delete this->studentClassList[i];
+        count--;
     }
 
     //then delete studentClassList
@@ -82,7 +84,20 @@ void ClassRoom::read()
     }
     count = Student::studentNumber;
 }
-
+///////////////////////////////////////////////////////////////////////
+//
+// Function: getCount()                                        
+//                                                                   
+// Description:
+//    Displays the number of student objects stored in the studentClassList array
+//
+// Returns:                  
+// count                                        
+///////////////////////////////////////////////////////////////////////
+int ClassRoom::getCount()
+{
+    return count;
+}
 ///////////////////////////////////////////////////////////////////////
 //
 // Function: print()                                         
