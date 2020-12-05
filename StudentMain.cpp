@@ -22,11 +22,13 @@ int main()
 	cout << "Student data sorted by last name" << endl;
 	csc134.sortByLastName();
 	csc134.print();
+	cout << endl;
 	cout << "Student data sorted by exam average" << endl;
 	csc134.sortByExamAvg();
 	csc134.print();
+	cout << endl;
 	double examAvg = csc134.examAvg();
-	cout << "The total average of the class is:" << examAvg << endl;
+	cout << "The total average of the class is: " << examAvg << endl;
 	system("pause");
 	return 0;
 }

@@ -275,7 +275,7 @@ void Student::calcAvg()
 
 void Student::displayStudent()
 {
-    cout << studentFirstName << "   " << studentLastName << "   " << ssn;
+    cout << studentFirstName << " " << studentLastName << " " << ssn;
     for (int i = 0; i < 4; ++i) {
         cout << "   " << examGrades[i];
     }
