@@ -276,10 +276,10 @@ void Student::calcAvg()
 
 void Student::displayStudent()
 {
-    cout << studentFirstName << setw(12)  << studentLastName << setfill (' ') << setw (12) << ssn;
+    cout <<left<< setfill(' ')<< setw(10)<< studentFirstName << setw(10)  << studentLastName<< setw (12) << ssn;
     for (int i = 0; i < 4; ++i) {
-        cout << setw(5) << fixed << setprecision(2) << examGrades[i];
+        cout << setw(8) << fixed << setprecision(2) << examGrades[i];
     }
-    cout << setw(5) << examAvg;
+    cout << setw(8) << examAvg;
     cout << endl;
 }
