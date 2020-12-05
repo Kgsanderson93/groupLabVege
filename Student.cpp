@@ -278,8 +278,8 @@ void Student::displayStudent()
 {
     cout << studentFirstName << " " << studentLastName << setfill (' ') << setw (10) << ssn;
     for (int i = 0; i < 4; ++i) {
-        cout << setfill(' ') << setw(10) << examGrades[i];
+        cout << setw(10) << examGrades[i];
     }
-    cout << setfill(' ') << setw(10) << examAvg;
+    cout << setw(10) << examAvg;
     cout << endl;
 }
