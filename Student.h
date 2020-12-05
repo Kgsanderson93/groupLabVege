@@ -35,7 +35,7 @@ public:
 	static int studentNumber;
 	Student();
 	Student(string StudentFirstName, string StudentLastName, string ssn, double* examGrades);
-	
+
 	//Initialize getter functions for each attribute
 	const string getFirstName();
 	const string getLastName();
@@ -54,5 +54,5 @@ public:
 
 	//Initialize display function
 	void displayStudent();
-	
+
 };

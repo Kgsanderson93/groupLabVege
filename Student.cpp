@@ -17,7 +17,7 @@ using namespace std;
 //Start student count at 0. It will be increased or decreased for each count of students being created or removed
 int Student::studentNumber = 0;
 //initialize this pointers
-Student::Student():studentFirstName("jane"), studentLastName("doe"), ssn("***-**-****")
+Student::Student() :studentFirstName("jane"), studentLastName("doe"), ssn("***-**-****")
 {
     //examGrades count starts at 0
     this->examAvg = 0;
@@ -186,7 +186,7 @@ void Student::setStudentFirstName(string* studentFirstName)
 
 void Student::setStudentLastName(string* studentLastName)
 {
-     studentLastName = studentLastName;
+    studentLastName = studentLastName;
 }
 
 ///////////////////////////////////////////////////////////////////////
@@ -206,7 +206,7 @@ void Student::setStudentLastName(string* studentLastName)
 
 void Student::setSSN(string ssn)
 {
-    this-> ssn = ssn;
+    this->ssn = ssn;
 }
 
 ///////////////////////////////////////////////////////////////////////
@@ -228,7 +228,7 @@ void Student::setExamGrades(double examGrades[4])
 {
     for (int i = 0; i < 4; ++i)
     {
-        this-> examGrades[i] = examGrades[i];
+        this->examGrades[i] = examGrades[i];
     }
 }
 
@@ -255,7 +255,7 @@ void Student::calcAvg()
         sum += examGrades[i];
     }
     examAvg = sum / 4;
-    
+
 }
 
 ///////////////////////////////////////////////////////////////////////

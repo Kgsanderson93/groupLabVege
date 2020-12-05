@@ -21,6 +21,15 @@ int main()
 	//csc134.read();
 	//csc134.sortByExamAvg();
 	//csc134.print();
+	ClassRoom csc134;
+	csc134.read();
+	cout << "Student data sorted by last name";
+	csc134.sortByLastName();
+	csc134.print();
+	cout << "Student data sorted by exam average";
+	csc134.sortByExamAvg();
+	csc134.print();
+	return 0;
 	Student* x = new Student();
 	string hold = "Lisa";
 	string* point = &hold;

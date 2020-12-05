@@ -17,7 +17,7 @@ using namespace std;
 
 ClassRoom::ClassRoom() {//Classroom constructor function
     this->count = 0;
-    this->studentClassList = new Student*[MAX_SIZE];
+    this->studentClassList = new Student * [MAX_SIZE];
 }
 
 ClassRoom::~ClassRoom()
@@ -61,28 +61,28 @@ void ClassRoom::read()
 
     // classroom initializer function
     //have to check if open or error will occur if not.
-    if(fin.is_open())
-    { 
-        while (!fin.eof())//until end of file. 
+    if (fin.is_open())
+    {
+            while (!fin.eof())//until end of file.
         {
-            fin >> studentFirstName;
+            fin >> studentFirstName
             fin >> studentLastName;
             fin >> ssn;
             fin >> examGrades[0];
             fin >> examGrades[1];
             fin >> examGrades[2];
             fin >> examGrades[3];
-        
-            studentClassList[current] = new Student (studentFirstName, studentLastName, ssn, examGrades);
-      
+
+            studentClassList[current] = new Student(studentFirstName, studentLastName, ssn, examGrades);
+
 
             current++;
             Student::studentNumber++;
         }
     }
     else {
-    
-        cout << "File fails to open"<< endl;
+
+        cout << "File fails to open" << endl;
     }
     count = Student::studentNumber;
 }
@@ -154,10 +154,10 @@ void ClassRoom::sortByExamAvg()
 {
     int smallest = 0;
     Student* hold;
-    for (int i = 0; i < count-1; i++) {
+    for (int i = 0; i < count - 1; i++) {
         smallest = i;
-        for (int current= i+1; current<count; current++){
-            if (studentClassList[current]->getExamAvg() < studentClassList[smallest]->getExamAvg()){
+        for (int current = i + 1; current < count; current++) {
+            if (studentClassList[current]->getExamAvg() < studentClassList[smallest]->getExamAvg()) {
                 smallest = current;
             }
         }
@@ -183,20 +183,20 @@ void ClassRoom::sortByExamAvg()
 
 void ClassRoom::sortByLastName()
 {
-    
-  int smallest = 0;
-  Student* hold;
-  int compare;
-  for (int i = 0; i < count - 1; i++) {
-   smallest = i;
-      for (int current = i + 1; current < count; current++) {
-          compare = strcmp(studentClassList[current]->getLastName().c_str(), studentClassList[smallest]->getLastName().c_str());
-        if (compare < 0) { // can we use == here instead srtcmp?
-          smallest = current;
+
+    int smallest = 0;
+    Student* hold;
+    int compare;
+    for (int i = 0; i < count - 1; i++) {
+        smallest = i;
+        for (int current = i + 1; current < count; current++) {
+            compare = strcmp(studentClassList[current]->getLastName().c_str(), studentClassList[smallest]->getLastName().c_str());
+            if (compare < 0) { // can we use == here instead srtcmp?
+                smallest = current;
+            }
         }
-      }
-   hold = studentClassList[smallest];
-   studentClassList[smallest] = studentClassList[i];
-   studentClassList[i] = hold;
-  }
+        hold = studentClassList[smallest];
+        studentClassList[smallest] = studentClassList[i];
+        studentClassList[i] = hold;
+    }
 }
