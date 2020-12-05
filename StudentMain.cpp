@@ -5,7 +5,7 @@
 // Programmers: David Shostak, Kayla Sanderson, Donovan Young Wake           
 //
 // Description:
-// 
+// This class contains drivers for the classroom objects.
 // 
 ////////////////////////////////////////////////////////////////////////
 #include"Classroom.h"

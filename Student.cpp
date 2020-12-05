@@ -2,12 +2,10 @@
 // Class: Student.cpp                                         
 //                                                                   
 // Description:
-// Description of the class and its purpose         
-//
-// List of data members
+// This class includes the getter and setter functions for a new student object when it is created.
 //
 // List of member functions                                       
-// 
+// getFirstName(), getLastName(), getSSN(), getExamGrades(), getExamAvg(), setStudentFirstName(), setSSN(), setExamGrades(), calcAvg(),  displayStudent()
 ///////////////////////////////////////////////////////////////////////
 #include<iostream>
 #include<string>
@@ -57,10 +55,7 @@ Student::Student(string studentFirstName, string studentLastName, string ssn, do
 //                                                                   
 // Description:
 //    A getter function for the first name
-//
-// Parameters:  
-//                  
-//                                                       
+//                                                      
 // Returns:  
 //    studentFirstName : The first name of the student                 
 //                                            
@@ -77,9 +72,7 @@ const string Student::getFirstName()
 //                                                                   
 // Description:
 //    A getter function for the student's last name
-//
-// Parameters:                
-//                                                       
+//                                                     
 // Returns:  
 //    studentLastName : The last name of the student                 
 //                                            
@@ -95,10 +88,7 @@ const string Student::getLastName()
 // Function: getSSN()                                          
 //                                                                   
 // Description:
-//    A getter function for the student's Social Security Number
-//
-// Parameters:  
-//                 
+//    A getter function for the student's Social Security Number                
 //                                                       
 // Returns:  
 //    ssn : The student's Social Security Number                 
@@ -115,10 +105,7 @@ string Student::getSSN()
 // Function: getExamGrades()                                          
 //                                                                   
 // Description:
-//    A getter function for the student's exam grades
-//
-// Parameters:  
-//                  
+//    A getter function for the student's exam grades                  
 //                                                       
 // Returns:  
 //    examGrades : An array containing the student's exam grades                 
@@ -135,10 +122,7 @@ double* Student::getExamGrades()
 // Function: getExamAvg()                                          
 //                                                                   
 // Description:
-//    A getter function for the student's average exam score
-//
-// Parameters:  
-//                   
+//    A getter function for the student's average exam score                  
 //                                                       
 // Returns:  
 //    examAvg : The average exam score for the student                 
@@ -158,10 +142,7 @@ double Student::getExamAvg()
 //    A setter function for the student's first name
 //
 // Parameters:  
-//    studentFirstName : The first name of the student object               
-//                                                       
-// Returns:  
-//                     
+//    studentFirstName : The first name of the student object                                    
 //                                            
 ///////////////////////////////////////////////////////////////////////
 
@@ -178,10 +159,7 @@ void Student::setStudentFirstName(string* studentFirstName)
 //    A setter function for the student's last name
 //
 // Parameters:  
-//    studentLastName : The last name of the student object               
-//                                                       
-// Returns:  
-//                     
+//    studentLastName : The last name of the student object                                    
 //                                            
 ///////////////////////////////////////////////////////////////////////
 
@@ -198,10 +176,7 @@ void Student::setStudentLastName(string* studentLastName)
 //    A setter function for the student's Social Security Number
 //
 // Parameters:  
-//    ssn : The Social Security Number for the student object               
-//                                                       
-// Returns:  
-//                     
+//    ssn : The Social Security Number for the student object                                    
 //                                            
 ///////////////////////////////////////////////////////////////////////
 
@@ -218,10 +193,7 @@ void Student::setSSN(string ssn)
 //    A setter function for the student's exam scores
 //
 // Parameters:  
-//    examGrades : An array containing the exam scores for a student object               
-//                                                       
-// Returns:  
-//                     
+//    examGrades : An array containing the exam scores for a student object                                   
 //                                            
 ///////////////////////////////////////////////////////////////////////
 
@@ -241,10 +213,10 @@ void Student::setExamGrades(double examGrades[4])
 //    Calculates the average score in an array of exam scores
 //
 // Parameters:  
-//                 
+//    ExamGrades         
 //                                                       
 // Returns:  
-//                     
+//    ExamAverage              
 //                                            
 ///////////////////////////////////////////////////////////////////////
 
@@ -267,11 +239,8 @@ void Student::calcAvg()
 //    Displays the attributes for each student object
 //
 // Parameters:  
-//                   
-//                                                       
-// Returns:  
-//                     
-//                                            
+//    studentFirstName, studentLastName, ssn, examgrades, examAvg         
+//                                                                                                                  
 ///////////////////////////////////////////////////////////////////////
 
 void Student::displayStudent()

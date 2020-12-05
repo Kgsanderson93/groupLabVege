@@ -3,7 +3,7 @@
 // Class: Classroom.h                                         
 //                                                                   
 // Description: 
-// 
+// Initializes parameters of a classroom object. 
 //
 // List of data members
 // string name, int count, student s[24]
